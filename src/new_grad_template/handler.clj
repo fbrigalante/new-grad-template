@@ -8,7 +8,7 @@
 (defroutes app-routes
   (GET  "/numbers/:n{[0-9]+}" [n] (str (query (get-numbers) (read-string n))))
   (GET  "/numbers" [] (str (get-numbers)))
-  (POST "/numbers" [N] (str (add-number (read-string N))) {:status 201})
+  (POST "/numbers" [N] (str (add-number! (read-string N))) {:status 201})
   (route/not-found "Not Found"))
   
 

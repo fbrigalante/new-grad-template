@@ -5,11 +5,11 @@
             [new-grad-template.numbers :refer :all]))
 
 (fact "can query empty list of numbers"
-      (reset-numbers)
+      (reset-numbers!)
       ((app (mock/request :get "/numbers/7")) :body) => "0")
 
 (fact "can add and query numbers"
-      (reset-numbers)
+      (reset-numbers!)
       ((app (mock/request :post "/numbers?N=1"))  :status) => 201
       ((app (mock/request :post "/numbers?N=3"))  :status) => 201
       ((app (mock/request :post "/numbers?N=5"))  :status) => 201
