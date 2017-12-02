@@ -1,4 +1,4 @@
-(ns new-grad-template.handler-test
+(ns new-grad-template.integration-test
   (:require [midje.sweet :refer :all]
             [ring.mock.request :as mock]
             [new-grad-template.handler :refer :all]
